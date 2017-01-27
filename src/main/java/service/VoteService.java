@@ -1,6 +1,7 @@
 package service;
 
 import model.User;
+import model.Vote;
 
 import java.io.IOException;
 import java.util.List;
@@ -10,8 +11,10 @@ import java.util.List;
  */
 public interface VoteService {
 
-    void parseCSVVote() throws IOException;
+    List<Vote> parseCSVVote() throws IOException;
     List<User> parseCSVUser() throws IOException;
-    void addUser () throws IOException;
-    void addVote () throws IOException;
+    User addUser (User user) throws IOException;
+    Vote addVote (Vote vote) throws IOException;
+    User getUser(Long id) throws IOException;
+    Vote getVote(Long id) throws IOException;
 }
