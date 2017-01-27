@@ -109,4 +109,12 @@ public class VoteServiceImpl implements VoteService {
         }
         return null;
     }
+
+    public User deleteUser(User user) {
+        return null;
+    }
+
+    public Vote deleteVote(Vote vote) {
+        return null;
+    }
 }
