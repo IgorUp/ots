@@ -1,14 +1,17 @@
 package service;
 
-import org.springframework.stereotype.Service;
+import model.User;
+
+import java.io.IOException;
+import java.util.List;
 
 /**
- * Created by igor on 26.1.17.
+ * Created by igor on 27.1.17.
  */
-@Service
-public class VoteService {
+public interface VoteService {
 
-
-
-
+    void parseCSVVote() throws IOException;
+    List<User> parseCSVUser() throws IOException;
+    void addUser () throws IOException;
+    void addVote () throws IOException;
 }
